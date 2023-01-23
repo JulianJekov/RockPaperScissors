@@ -31,8 +31,10 @@ public class RockPaperScissors {
             System.out.println("Computer played " + computerMove);
 
 
-
-             if (playerMove.equals("r")) {
+            if (playerMove.equals(computerMove)) {
+                draws++;
+                System.out.println("It is a draw!");
+            } else if (playerMove.equals("r")) {
                 if (computerMove.equals("p")) {
                     computerWins++;
                     System.out.println("You lose!");
@@ -48,7 +50,7 @@ public class RockPaperScissors {
                     computerWins++;
                     System.out.println("You lose!");
                 }
-            } else if (playerMove.equals("s")) {
+            } else {
                 if (computerMove.equals("p")) {
                     playerWins++;
                     System.out.println("You win!");
@@ -56,9 +58,7 @@ public class RockPaperScissors {
                     computerWins++;
                     System.out.println("You lose!");
                 }
-            }else if (playerMove.equals(computerMove)) {
-                 draws++;
-                 System.out.println("It is a draw!");
+            }
 
             totalGames++;
             System.out.println("Do you want to play again? (y/n)");
